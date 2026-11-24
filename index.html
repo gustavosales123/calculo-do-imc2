@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de IMC</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="calculator">
+
+            <div class="header">
+                <div class="icon">⚖️</div>
+
+                <h1>Calculadora de IMC</h1>
+
+                <p>
+                    Descubra seu Índice de Massa Corporal
+                    de maneira simples e rápida.
+                </p>
+            </div>
+
+            <form id="imcForm">
+
+                <div class="input-group">
+                    <label for="peso">Peso (kg)</label>
+
+                    <input
+                        type="number"
+                        id="peso"
+                        placeholder="Ex: 70"
+                        min="1"
+                        max="500"
+                        step="0.1"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="altura">Altura (m)</label>
+
+                    <input
+                        type="number"
+                        id="altura"
+                        placeholder="Ex: 1.75"
+                        min="0.5"
+                        max="2.8"
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn-calcular">
+                    Calcular IMC
+                </button>
+
+                <button
+                    type="button"
+                    id="btnLimpar"
+                    class="btn-limpar"
+                >
+                    Limpar dados
+                </button>
+
+            </form>
+
+            <section id="resultado" class="resultado hidden">
+
+                <h2>Seu resultado</h2>
+
+                <div class="valor-imc">
+                    <span id="valorIMC">0.0</span>
+                </div>
+
+                <p class="classificacao" id="classificacao">
+                    Resultado
+                </p>
+
+                <p id="mensagem" class="mensagem"></p>
+
+                <div class="barra-container">
+                    <div class="barra">
+                        <div class="marcador" id="marcador"></div>
+                    </div>
+
+                    <div class="legenda">
+                        <span>Baixo</span>
+                        <span>Normal</span>
+                        <span>Sobrepeso</span>
+                        <span>Obesidade</span>
+                    </div>
+                </div>
+
+                <p class="observacao">
+                    O IMC é um indicador geral e não substitui
+                    uma avaliação individualizada de saúde.
+                </p>
+
+            </section>
+
+            <footer>
+                <p>Calculadora de IMC | Projeto HTML, CSS e JS</p>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
